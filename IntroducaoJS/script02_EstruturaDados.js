@@ -53,11 +53,14 @@ while (continuar) {
 }
 
 //funçoes (métodos)
-
+//function return -> devolver alguma coisa
 function saudacao(nome) {
     return "Olá, " + nome + "!!!";
 }
 
 console.log(saudacao("Diogo"));
-
+// function void -> return vazio
+function hello(nome){
+    console.log("Hello, World!!!")
+}
 
