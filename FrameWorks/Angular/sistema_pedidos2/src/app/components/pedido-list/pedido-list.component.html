@@ -1,0 +1,13 @@
+<h2>Pedidos Registrados</h2>
+<div *ngFor="let p of pedidos">
+  <p><strong>Cliente:</strong> {{ p.cliente.nome }}</p>
+  <p>
+    <strong>Itens:</strong>
+    <span *ngFor="let i of p.itens">
+      <!-- {{ getProdutoNome(i.produtoId) }} (x{{ i.quantidade }}), -->
+    </span>
+  </p>
+  <p><strong>Desconto:</strong> {{ p.desconto }}%</p>
+  <p><strong>Total:</strong> R$ {{ calcularTotal(p) | number: '1.2-2' }}</p>
+  <hr />
+</div>
