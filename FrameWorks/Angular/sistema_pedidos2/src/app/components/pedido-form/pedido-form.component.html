@@ -7,7 +7,7 @@
 <h3>Produtos</h3>
 <div *ngFor="let item of itens; let i = index">
   <label>
-    {{ produtos[i]?.nome }} - R${{ produtos[i]?.preco }}
+    {{ produtos[i].nome }} - R${{ produtos[i].preco }}
     <input type="number" [(ngModel)]="item.quantidade" min="0" />
   </label>
 </div>

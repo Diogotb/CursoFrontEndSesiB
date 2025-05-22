@@ -22,8 +22,8 @@ export class DadosService {
     // me retorna uma lista de clientes 
   }
   //post
-  adicionarCliente(cliente: Cliente): Observable<Cliente>{
-    return this.http.post<Cliente>(`${this.baseUrl}/clientes`,cliente);
+  adicionarCliente(cliente: Cliente): Observable<Cliente[]>{
+    return this.http.post<Cliente[]>(`${this.baseUrl}/clientes`,cliente);
   }
 
   //produto
@@ -32,16 +32,16 @@ export class DadosService {
     return this.http.get<Produto[]>(`${this.baseUrl}/produtos`);
   }
   //post
-  adicionarProduto(produto: Produto): Observable<Produto>{
-    return this.http.post<Produto>(`${this.baseUrl}/produtos`,produto);
+  adicionarProduto(produto: Produto): Observable<Produto[]>{
+    return this.http.post<Produto[]>(`${this.baseUrl}/produtos`,produto);
   }
   //pedidio
   getPedidos(): Observable<Pedido[]>{
     return this.http.get<Pedido[]>(`${this.baseUrl}/pedidos`);
   }
   //post
-  adicionarPedido(pedido: Pedido): Observable<Pedido>{
-    return this.http.post<Pedido>(`${this.baseUrl}/pedidos`,pedido);
+  adicionarPedido(pedido: Pedido): Observable<Pedido[]>{
+    return this.http.post<Pedido[]>(`${this.baseUrl}/pedidos`,pedido);
   }
   
 }
