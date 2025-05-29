@@ -5,7 +5,7 @@
       "nome": "Desenvolver FrontEnd Jr",
       "foto": "foto1.jpg",
       "descricao": "Trabalhar com HTML, CSS e JS",
-      "salario": 4000
+      "salario": "5000"
     },
     {
       "id": "2",
@@ -22,11 +22,18 @@
       "salario": 10000
     },
     {
-      "id": 4,
+      "id": "4",
       "nome": "Engenheiro de Nuvem",
       "foto": "foto4.jpg",
       "descricao": "Trabalhar com Nuvem AWS",
       "salario": 8000
+    },
+    {
+      "id": "202501",
+      "nome": "Teste",
+      "foto": "foto1.jpg",
+      "descricao": "Vaga Teste",
+      "salario": "15000"
     }
   ]
 }
