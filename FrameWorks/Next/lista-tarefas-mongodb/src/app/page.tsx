@@ -78,8 +78,8 @@ export default function Home(){
         method: "DELETE",
       });
       if(resultado){
-        //fetchTarefas(); //server-side
-        setTarefas(tarefas.filter((tarefa)=> tarefa._id !==id));//remove a tarefa do vetor
+        fetchTarefas(); //server-side
+        //setTarefas(tarefas.filter((tarefa)=> tarefa._id !==id));//remove a tarefa do vetor
       }
     } catch (error) {
       console.error(error);
@@ -106,7 +106,7 @@ export default function Home(){
             <input type="checkbox"
             checked={tarefa.concluida}
             onChange={()=> updateTarefa(tarefa._id.toString(), tarefa.concluida)} />
-            <button onClick={()=> deleteTarefa(tarefa._id.toString)}>Excluir</button>
+            <button onClick={()=> deleteTarefa(tarefa._id.toString())}>Excluir</button>
           </li>
         ))}
       </ul>
