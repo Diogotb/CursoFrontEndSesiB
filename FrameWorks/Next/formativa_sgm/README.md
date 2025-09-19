@@ -112,6 +112,7 @@ graph TD
     uc5 -.-> uc1
 
 ```
+![alt text](image.png)
 
 #### Explicação:
 - Atores: Técnico, Gestor e Administrador.
@@ -141,6 +142,7 @@ graph TD
     K --> B
 
 ```
+![alt text](image-1.png)
 
 #### Explicação:
 
