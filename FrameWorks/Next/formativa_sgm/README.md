@@ -81,18 +81,18 @@ Este diagrama ilustra as interações dos diferentes tipos de usuários (atores)
 
 ```mermaid
 
-usecaseDiagram
-    actor Tecnico as "Técnico de Manutenção"
-    actor Gestor as "Gestor de Manutenção"
-    actor Admin as "Administrador"
+graph TD
+    subgraph "Sistema de Gestão de Manutenção (SGM)"
+        uc1([Fazer Login])
+        uc2([Gerenciar Equipamentos (CRUD)])
+        uc3([Gerenciar Ordens de Serviço (CRUD)])
+        uc4([Visualizar Dashboard])
+        uc5([Gerenciar Usuários])
+    end
 
-    package "Sistema de Gestão de Manutenção (SGM)" {
-        usecase uc1 as "Fazer Login"
-        usecase uc2 as "Gerenciar Equipamentos (CRUD)"
-        usecase uc3 as "Gerenciar Ordens de Serviço (CRUD)"
-        usecase uc4 as "Visualizar Dashboard"
-        usecase uc5 as "Gerenciar Usuários"
-    }
+    Tecnico([👷 Técnico de Manutenção])
+    Gestor([📋 Gestor de Manutenção])
+    Admin([⚙️ Administrador])
 
     Tecnico --> uc1
     Tecnico --> uc3
@@ -106,10 +106,10 @@ usecaseDiagram
     Admin --> uc5
     Admin --> Gestor
 
-    uc3 ..> uc1 : <<include>>
-    uc2 ..> uc1 : <<include>>
-    uc4 ..> uc1 : <<include>>
-    uc5 ..> uc1 : <<include>>
+    uc3 -.-> uc1
+    uc2 -.-> uc1
+    uc4 -.-> uc1
+    uc5 -.-> uc1
 
 ```
 
@@ -130,7 +130,7 @@ Este diagrama detalha o processo passo a passo que um usuário segue para se aut
 graph TD
     A[Início] --> B{Acessa a Tela de Login}
     B --> C[Preenche E-mail e Senha]
-    C --> D[Clica em "Entrar"]
+    C --> D[Clica em Entrar]
     D --> E{Sistema Valida Credenciais?}
     E -- Sim --> F[Gera Token JWT]
     F --> G[Armazena Token no Cliente]
