@@ -82,10 +82,10 @@ Este diagrama ilustra as interações dos diferentes tipos de usuários (atores)
 ```mermaid
 
 graph TD
-    subgraph "Sistema de Gestão de Manutenção (SGM)"
+    subgraph "Sistema de Gestão de Manutenção - SGM"
         uc1([Fazer Login])
-        uc2([Gerenciar Equipamentos (CRUD)])
-        uc3([Gerenciar Ordens de Serviço (CRUD)])
+        uc2([Gerenciar Equipamentos - CRUD])
+        uc3([Gerenciar Ordens de Serviço - CRUD])
         uc4([Visualizar Dashboard])
         uc5([Gerenciar Usuários])
     end
