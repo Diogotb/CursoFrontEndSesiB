@@ -162,8 +162,8 @@ A tabela abaixo apresenta os riscos identificados no projeto **SGM**, organizado
 
 ## Riscos Técnicos
 
-| ID  | Risco                                     | Probabilidade | Impacto | Mitigação |
-|-----|-------------------------------------------|---------------|---------|-----------|
+| ID  | Risco                    | Probabilidade | Impacto | Mitigação |
+|-----|--------------------------|---------------|---------|-----------|
 | 1   | Chave secreta do JWT comprometida         | Média         | Alto    | Utilizar chaves secretas longas e complexas, armazená-las em variáveis de ambiente e implementar política de rotação de chaves. |
 | 2   | Vulnerabilidade de truncamento do Bcrypt  | Baixa         | Alto    | Garantir que a entrada para o hashing de senha nunca exceda 72 bytes e tratar a senha de forma isolada, sem concatenação. |
 | 3   | Lentidão do sistema com aumento de dados  | Média         | Média   | Otimizar consultas com indexação, implementar paginação e planejar arquitetura para escalabilidade futura. |
