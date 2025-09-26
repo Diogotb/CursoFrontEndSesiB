@@ -7,6 +7,7 @@ export interface IUsuario extends Document{
     _id:string; //vou precisar do _id no view // evita erro no código
     username: string;
     password?:string; // que pode ser nulo ( nao vou retonar a senha)
+    tipo: string;
     comparePassword(userPassword:string): Promise<boolean>;
 }
 
@@ -14,7 +15,8 @@ export interface IUsuario extends Document{
 
 const UsuarioSchema: Schema<IUsuario> = new Schema({
     username:{type:String, required:true, unique:true},
-    password:{type:String, required:true, select:false}
+    password:{type:String, required:true, select:false},
+    tipo:{type: String, enum:["tecnico","gerente","admin"],required:true}
     //select impede que a senha retorne por padrão
 });
 
