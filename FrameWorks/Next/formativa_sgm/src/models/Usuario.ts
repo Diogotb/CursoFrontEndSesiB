@@ -3,6 +3,7 @@
 import mongoose, { Document, Model, Schema } from "mongoose";
 import bcrypt from "bcrypt";
 
+
 export interface IUsuario extends Document{
     _id:string; //vou precisar do _id no view // evita erro no código
     username: string;
@@ -40,7 +41,8 @@ UsuarioSchema.methods.comparePassword = function (userPassword:string):Promise<b
 }
 
 //to e from
-const Usuario: Model<IUsuario> = mongoose.models.Usuario || mongoose.model<IUsuario>("Usuario", UsuarioSchema);
+const Usuario: Model<IUsuario> = mongoose.models.Usuario
+ || mongoose.model<IUsuario>("Usuario", UsuarioSchema);
 
 export default Usuario;
 
