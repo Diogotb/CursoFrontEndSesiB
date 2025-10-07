@@ -1,8 +1,10 @@
 // direcionar para a página de login
 
+
+
 "use client";
 
-
+import "./page.module.css";
 
 export default function Home() {
   return (
